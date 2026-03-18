@@ -187,6 +187,19 @@ export default function Portfolio() {
 
             {/* Main Hero Content */}
             <div className="max-w-4xl space-y-8">
+              <motion.div variants={fadeInUp} className="relative w-28 h-28 mx-auto -mb-4">
+                <div className="absolute inset-0 bg-emerald-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
+                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-emerald-500/30 p-1 bg-white/5 backdrop-blur-md">
+                  <div className="w-full h-full rounded-full overflow-hidden relative">
+                    <Image 
+                      src="/mockups/foto de perfil.png" 
+                      alt="Valentina Paz Profile" 
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </motion.div>
               <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium w-max backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)] mx-auto">
                 <Sparkles className="w-4 h-4" />
                 <span>Frontend Specialist · Vue.js & Next.js</span>
@@ -274,7 +287,25 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 flex flex-col gap-8">
+              {/* Profile Image card */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+                <div className="relative aspect-square sm:aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                  <Image 
+                    src="/mockups/foto de perfil.png" 
+                    alt="Valentina Paz" 
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+              </motion.div>
+
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
                 <div className="relative bg-[#0b1120] rounded-3xl p-8 border border-white/10 shadow-2xl">
