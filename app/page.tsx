@@ -158,6 +158,25 @@ export default function Portfolio() {
       </header>
 
       <main className="relative z-10 pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col gap-32">
+        {/* New Banner Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl"
+        >
+          <div className="aspect-[21/9] w-full relative">
+            <Image 
+              src="/mockups/unnamed.jpg" 
+              alt="CodeMochi Banner" 
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-40" />
+          </div>
+        </motion.div>
+
         {/* React Section Wrapper for ScrollSpy */}
         <section id="inicio" className="scroll-mt-32">
           {/* Hero Section */}
