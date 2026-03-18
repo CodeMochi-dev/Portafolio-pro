@@ -1,44 +1,79 @@
-# Portfolio Pro 🚀
+# Valentina Paz | Full Stack Developer 🚀
 
-[![Vercel Deployment](https://img.shields.io/badge/Vercel-View%20Project-000000?style=for-the-badge&logo=vercel)](https://portafolio-pro-virid.vercel.app/)
+<div align="center">
 
-Este es mi portafolio profesional desarrollado con **Next.js**, **Tailwind CSS** y **Framer Motion**.
+<img 
+  src="./public/mockups/unnamed.jpg" 
+  style="width: 70%; max-width: 900px; border-radius: 20px;" 
+  alt="Valentina Paz Banner"
+/>
+
+<br />
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-View%20Live-000000?style=for-the-badge&logo=vercel)](https://portafolio-pro-virid.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/valentinapaz)
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail)](mailto:valentinapazll.r@gmail.com)
+
+</div>
 
 ---
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### 🎯 Mi Propuesta de Valor
+Desarrollo experiencias digitales **vibrantes, sólidas y orientadas a resultados**. Me especializo en el ecosistema Frontend moderno (**Vue.js / Next.js**) para transformar ideas complejas en interfaces de usuario intuitivas y de alto rendimiento.
 
-## Getting Started
+**"No solo escribo código; construyo soluciones que impulsan el valor del producto desde el primer scroll."**
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 💡 ¿Por qué trabajar conmigo?
+- **Enfoque en UX/UI**: Interfaces diseñadas para el usuario final, no solo para que funcionen, sino para que cautiven.
+- **Código Limpio y Escalable**: Arquitecturas basadas en componentes reutilizables y estados reactivos.
+- **Compromiso Total**: Entrega de aplicaciones listas para producción, optimizadas para SEO y accesibilidad.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🛠️ Stack Tecnológico
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Frontend | Backend & Data | Herramientas |
+| :--- | :--- | :--- |
+| **Vue.js 3** / Next.js | **Firebase** (Firestore/Auth) | Git / GitHub Actions |
+| JavaScript (ES6+) | Node.js (Fundamentos) | Vercel / Netlify |
+| HTML5 / CSS3 (BEM) | REST APIs | Figma / VS Code |
+| **Tailwind CSS** | SQL / NoSQL | NPM / Yarn |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 🚀 Proyectos Destacados
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### [EcoMarket](https://portafolio-pro-virid.vercel.app/#proyectos)
+> Showcase de Productos Digitales con Vue.js. Arquitectura SPA con localización completa para el mercado chileno.
+- **Stack:** Vue.js, Composition API, Glassmorphism UI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### [LibroApp](https://portafolio-pro-virid.vercel.app/#proyectos)
+> Gestión de Catálogo Educativo con integración en tiempo real.
+- **Stack:** Vue.js, Firebase Firestore (CRUD completo).
 
-## Deploy on Vercel
+#### [Alkemi Wallet](https://github.com/CodeMochi-dev)
+> Aplicación financiera desde cero con fundamentos sólidos de control de versiones.
+- **Stack:** HTML, CSS, JavaScript Moderno.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🎓 Formación & Logros
+- **Desarrollo de Aplicaciones Front-end Trainee** | ISEG / SENCE (2026)
+- **Certificación en Metodologías Ágiles** (Scrum)
+- **Especialización en Vue.js Moderno**
+
+---
+
+### 📫 Hablemos
+¡Estoy abierta a nuevas oportunidades y retos!
+- 📍 **Residencia:** Santiago, Chile (Disponible para Remoto)
+- 📧 **Correo:** [valentinapazll.r@gmail.com](mailto:valentinapazll.r@gmail.com)
+- 🤝 **LinkedIn:** [valentina-paz-ll](https://linkedin.com/in/valentinapaz)
+
+---
+
+<div align="center">
+  <sub>Construido con ❤ por Valentina Paz.</sub>
+</div>

@@ -158,77 +158,74 @@ export default function Portfolio() {
       </header>
 
       <main className="relative z-10 pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col gap-32">
-        {/* New Banner Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl"
-        >
-          <div className="aspect-[21/9] w-full relative">
-            <Image 
-              src="/mockups/unnamed.jpg" 
-              alt="CodeMochi Banner" 
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-40" />
-          </div>
-        </motion.div>
-
-        {/* React Section Wrapper for ScrollSpy */}
+        {/* Impactful Header Section instead of just banner */}
         <section id="inicio" className="scroll-mt-32">
-          {/* Hero Section */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="min-h-[75vh] flex flex-col justify-center relative"
+            className="flex flex-col items-center text-center gap-12"
           >
-            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8 w-max backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)]">
-              <Sparkles className="w-4 h-4" />
-              <span>Full Stack Developer Portfolio</span>
-              <span className="relative flex h-2 w-2 ml-1">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
+            {/* Banner Section - Optimized size and centering */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="w-full flex justify-center"
+            >
+              <div className="relative w-[85%] sm:w-[70%] max-w-[900px] aspect-[21/7] rounded-[20px] overflow-hidden border border-white/10 shadow-2xl group">
+                <Image 
+                  src="/mockups/unnamed.jpg" 
+                  alt="Valentina Paz Portfolio Banner" 
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030712]/60 via-transparent to-transparent" />
+              </div>
             </motion.div>
 
-            <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter mb-6 leading-[1.1]">
-              Construyendo el <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-sm">
-                Futuro Digital
-              </span>
-            </motion.h1>
+            {/* Main Hero Content */}
+            <div className="max-w-4xl space-y-8">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium w-max backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)] mx-auto">
+                <Sparkles className="w-4 h-4" />
+                <span>Frontend Specialist · Vue.js & Next.js</span>
+              </motion.div>
 
-            <motion.div variants={fadeInUp} className="max-w-2xl mb-10">
-              <h2 className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed">
-                Hola, soy <strong className="text-white font-semibold">Valentina Paz</strong> 👋. Junior Developer de Santiago, Chile. Especialista en <span className="text-emerald-400 font-medium">Vue.js</span>, enfocada en interfaces vibrantes y sólidas para el usuario de hoy.
-              </h2>
-            </motion.div>
+              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[1.05]">
+                Diseño que Conecta, <br />
+                <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-sm">
+                  Código que Escala
+                </span>
+              </motion.h1>
 
-            <motion.div variants={staggerContainer} className="flex flex-wrap gap-4 mb-14">
-              {[
-                { icon: <MapPin className="w-4 h-4 text-emerald-400" />, text: "Santiago, Chile" },
-                { icon: <Briefcase className="w-4 h-4 text-emerald-400" />, text: "Disponible Remoto" },
-                { icon: <Mail className="w-4 h-4 text-emerald-400" />, text: "valentinapazll.r@gmail.com" },
-              ].map((item, idx) => (
-                <motion.div key={idx} variants={fadeInUp} className="flex items-center gap-2.5 text-sm text-slate-300 bg-slate-800/40 backdrop-blur-md px-5 py-2.5 rounded-full border border-slate-700/50 hover:bg-slate-800/70 hover:border-slate-600 transition-colors">
-                  {item.icon}
-                  <span className="font-medium">{item.text}</span>
-                </motion.div>
-              ))}
-            </motion.div>
+              <motion.div variants={fadeInUp} className="max-w-2xl mx-auto">
+                <h2 className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed">
+                  Hola, soy <strong className="text-white font-semibold">Valentina Paz</strong> 👋. Junior Developer de Santiago, Chile. Transformo ideas complejas en experiencias digitales <span className="text-emerald-400 font-medium">vibrantes y sólidas</span> con un enfoque total en el usuario.
+                </h2>
+              </motion.div>
 
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-              <a href="#proyectos" className="inline-flex justify-center items-center gap-2 px-8 py-4 bg-white text-slate-900 font-bold rounded-2xl hover:bg-emerald-400 hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_30px_rgba(52,211,153,0.3)]">
-                Ver Proyectos <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/CodeMochi-dev" target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center gap-2 px-8 py-4 bg-slate-800/80 text-white font-semibold rounded-2xl border border-slate-700 hover:bg-slate-700 transition-all duration-300 backdrop-blur-sm">
-                <Github className="w-5 h-5" /> Perfil de GitHub
-              </a>
-            </motion.div>
+              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-5 justify-center mt-10">
+                <a href="#proyectos" className="inline-flex items-center gap-2 px-10 py-5 bg-emerald-500 text-slate-950 font-black rounded-2xl hover:bg-emerald-400 transition-all duration-300 transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(16,185,129,0.3)]">
+                  Ver Proyectos <ArrowRight className="w-5 h-5" />
+                </a>
+                <a href="https://linkedin.com/in/valentinapaz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white/5 text-white font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                  <Linkedin className="w-5 h-5 text-emerald-400" /> Mi Conexión
+                </a>
+              </motion.div>
+              <motion.div variants={staggerContainer} className="flex flex-wrap gap-4 justify-center mt-12">
+                {[
+                  { icon: <MapPin className="w-4 h-4 text-emerald-400" />, text: "Santiago, Chile" },
+                  { icon: <Briefcase className="w-4 h-4 text-emerald-400" />, text: "Disponible Remoto" },
+                  { icon: <Mail className="w-4 h-4 text-emerald-400" />, text: "valentinapazll.r@gmail.com" },
+                ].map((item, idx) => (
+                  <motion.div key={idx} variants={fadeInUp} className="flex items-center gap-2.5 text-sm text-slate-300 bg-slate-800/40 backdrop-blur-md px-5 py-2.5 rounded-full border border-slate-700/50 hover:bg-slate-800/70 hover:border-slate-600 transition-colors">
+                    {item.icon}
+                    <span className="font-medium">{item.text}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
           </motion.div>
         </section>
 
@@ -260,10 +257,11 @@ export default function Portfolio() {
                 </div>
                 <ul className="space-y-3 mt-6">
                   {[
-                    "Desarrollo de SPAs dinámicas con Vue 3 y Composition API.",
-                    "Integración y gestión de datos con Firebase Firestore.",
-                    "Fuerte enfoque en la experiencia de usuario (UX) y el diseño.",
-                    "Certificada: Desarrollo de Aplicaciones Front-end Trainee · ISEG / SENCE 2026."
+                    "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API.",
+                    "Lógica de negocio sólida con JavaScript (ES6+) y TypeScript foundations.",
+                    "Integración eficiente de datos con Firebase Firestore y Realtime DB.",
+                    "Enfoque centrado en conversión (UX) y diseños Mobile-First.",
+                    "Graduada: Desarrollo Front-end Trainee · ISEG / SENCE 2026."
                   ].map((text, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
