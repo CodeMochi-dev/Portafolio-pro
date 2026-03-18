@@ -104,7 +104,7 @@ export default function Portfolio() {
         <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-emerald-900/10 blur-[150px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-teal-900/10 blur-[150px]" />
         <div className="absolute top-[40%] left-[50%] w-[40%] h-[40%] rounded-full bg-indigo-900/5 blur-[120px] translate-x-[-50%]" />
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.015] mix-blend-overlay"></div>
+        <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay" style={{ backgroundImage: "url('./noise.png')" }}></div>
       </div>
 
       {/* Navigation */}
