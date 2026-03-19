@@ -175,7 +175,7 @@ export default function Portfolio() {
             >
               <div className="relative w-[85%] sm:w-[70%] max-w-[900px] aspect-[21/7] rounded-[20px] overflow-hidden border border-white/10 shadow-2xl group">
                 <Image 
-                  src="/mockups/banner.jpg" 
+                  src="/mockups/banner mejorado.png" 
                   alt="Valentina Paz Portfolio Banner" 
                   fill
                   priority
