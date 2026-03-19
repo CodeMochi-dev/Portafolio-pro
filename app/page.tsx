@@ -98,17 +98,17 @@ export default function Portfolio() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-300 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-mint/30 selection:text-graphite overflow-x-hidden transition-colors duration-500">
       {/* Decorative Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-emerald-900/10 blur-[150px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-teal-900/10 blur-[150px]" />
-        <div className="absolute top-[40%] left-[50%] w-[40%] h-[40%] rounded-full bg-indigo-900/5 blur-[120px] translate-x-[-50%]" />
+        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-mint/5 blur-[150px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-pink/5 blur-[150px]" />
+        <div className="absolute top-[40%] left-[50%] w-[40%] h-[40%] rounded-full bg-lilac/5 blur-[120px] translate-x-[-50%]" />
         <div className="absolute inset-0 noise-bg"></div>
       </div>
 
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#030712]/70 backdrop-blur-xl border-b border-white/[0.05]">
+      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/70 backdrop-blur-xl border-b border-graphite/10">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -116,19 +116,19 @@ export default function Portfolio() {
             className="flex items-center gap-2 group cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 group-hover:border-emerald-400/50 transition-colors">
-              <span className="text-xl font-bold bg-gradient-to-br from-emerald-400 to-teal-200 bg-clip-text text-transparent">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-graphite/5 border border-graphite/20 group-hover:border-mint transition-colors">
+              <span className="text-xl font-bold bg-gradient-to-br from-graphite to-graphite-light bg-clip-text text-transparent">
                 V
               </span>
             </div>
-            <span className="text-lg font-bold tracking-tight text-slate-200 group-hover:text-white transition-colors hidden sm:block">
-              Valentina<span className="text-emerald-400">.</span>
+            <span className="text-lg font-bold tracking-tight text-foreground group-hover:text-graphite transition-colors hidden sm:block">
+              Valentina<span className="text-mint font-black">.</span>
             </span>
           </motion.div>
           <motion.nav
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="hidden md:flex items-center gap-1 p-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md"
+            className="hidden md:flex items-center gap-1 p-1.5 rounded-full bg-cement/10 border border-graphite/10 backdrop-blur-md"
           >
             {[
               { name: "Inicio", href: "#inicio" },
@@ -138,10 +138,10 @@ export default function Portfolio() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   activeSection === item.href.slice(1)
-                    ? "bg-slate-800/80 text-white shadow-sm"
-                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                    ? "bg-graphite text-white shadow-md shadow-graphite/20"
+                    : "text-foreground/70 hover:text-foreground hover:bg-cement/20"
                 }`}
               >
                 {item.name}
@@ -149,7 +149,7 @@ export default function Portfolio() {
             ))}
             <a
               href="#contacto"
-              className="ml-2 px-5 py-2 rounded-full text-sm font-semibold bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500 hover:text-white transition-all duration-300 border border-emerald-500/20 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.3)]"
+              className="ml-2 px-5 py-2 rounded-full text-sm font-bold bg-mint/20 text-graphite hover:bg-mint hover:text-graphite transition-all duration-300 border border-mint/30"
             >
               Contacto
             </a>
@@ -190,9 +190,9 @@ export default function Portfolio() {
               {/* Removed profile image and badge here as it is now in Sobre mí */}
               <div className="pt-8"></div>
 
-              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white px-2 tracking-tighter leading-[1.05] filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-graphite px-2 tracking-tighter leading-[1.05]">
                 Diseño que Conecta, <br />
-                <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-indigo-300 bg-clip-text text-transparent opacity-90">
+                <span className="bg-gradient-to-r from-mint via-lilac to-pink bg-clip-text text-transparent filter drop-shadow-sm">
                   Código que Escala
                 </span>
               </motion.h1>
@@ -249,16 +249,16 @@ export default function Portfolio() {
                   Hola, soy <strong className="text-white font-medium">Valentina Paz Llantèn Robles</strong> 👋. Junior Developer de Santiago, Chile. Transformo ideas complejas en experiencias digitales vibrantes y sólidas con un enfoque total en el usuario.
                 </p>
                 
-                <div className="pl-5 border-l-2 border-emerald-500/20 py-3 bg-white/2 rounded-r-xl">
-                  <p className="italic text-slate-300/90 leading-relaxed">
+                <div className="pl-5 border-l-4 border-mint py-3 bg-cement/20 rounded-r-2xl shadow-sm">
+                  <p className="italic text-graphite/80 leading-relaxed font-medium">
                     &quot;Mi compromiso es hacia el código limpio, las arquitecturas escalables y el aprendizaje continuo para construir soluciones integrales.&quot;
                   </p>
                 </div>
 
                 <div className="pt-4">
-                  <h4 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-indigo-400" />
+                  <h4 className="text-graphite font-black text-xl mb-8 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-lilac/30 flex items-center justify-center shadow-inner">
+                      <Sparkles className="w-6 h-6 text-graphite" />
                     </div>
                     Mi enfoque y capacidades:
                   </h4>
@@ -268,26 +268,26 @@ export default function Portfolio() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="space-y-5"
+                    className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4"
                   >
                     {[
-                      { title: "Especialista en Front-end:", text: "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API." },
-                      { title: "En formación Full Stack:", text: "Actualmente cursando especialización en Java, fortaleciendo la lógica de servidor y el manejo de bases de datos." },
-                      { title: "Lógica y Estructura:", text: "Sólida base en JavaScript (ES6+) y fundamentos de TypeScript." },
-                      { title: "Integración de Datos:", text: "Manejo de Firebase Firestore y Realtime DB para la persistencia de información." },
-                      { title: "Certificación:", text: "Graduada como Front-end Trainee (ISEG / SENCE, 2026)." }
+                      { title: "Especialista en Front-end:", text: "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API.", color: "bg-mint" },
+                      { title: "En formación Full Stack:", text: "Actualmente cursando especialización en Java, fortaleciendo la lógica de servidor.", color: "bg-lilac" },
+                      { title: "Lógica y Estructura:", text: "Sólida base en JavaScript (ES6+) y fundamentos de TypeScript.", color: "bg-pink" },
+                      { title: "Integración de Datos:", text: "Manejo de Firebase Firestore y Realtime DB.", color: "bg-cement" },
+                      { title: "Certificación:", text: "Graduada como Front-end Trainee (ISEG / SENCE, 2026).", color: "bg-mint" }
                     ].map((item, i) => (
                       <motion.li 
                         key={i} 
                         variants={fadeInUp}
-                        className="flex items-start gap-4 p-4 rounded-xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/20 transition-all duration-300 group/item"
+                        className="flex items-start gap-4 p-5 rounded-2xl bg-white/60 border border-graphite/5 hover:bg-white hover:shadow-xl hover:shadow-graphite/5 transition-all duration-500 group/item"
                       >
-                        <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-1 group-hover/item:bg-emerald-500/20 group-hover/item:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
-                           <ChevronRight className="w-4 h-4 text-emerald-400" />
+                        <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300 shadow-sm`}>
+                           <ChevronRight className="w-5 h-5 text-graphite" />
                         </div>
                         <div className="flex flex-col gap-1">
-                          <span className="text-emerald-300 font-bold text-sm tracking-wide uppercase">{item.title}</span>
-                          <span className="text-slate-300 group-hover/item:text-white transition-colors">{item.text}</span>
+                          <span className="text-graphite font-bold text-xs tracking-widest uppercase opacity-60">{item.title}</span>
+                          <span className="text-graphite/80 group-hover/item:text-graphite font-medium transition-colors">{item.text}</span>
                         </div>
                       </motion.li>
                     ))}
