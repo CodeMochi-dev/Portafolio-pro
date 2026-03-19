@@ -200,9 +200,9 @@ export default function Portfolio() {
                   </div>
                 </div>
               </motion.div>
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium w-max backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)] mx-auto">
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium w-max backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)] mx-auto transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_0_25px_rgba(16,185,129,0.2)]">
                 <Sparkles className="w-4 h-4" />
-                <span>Frontend Specialist · Vue.js & Next.js</span>
+                <span>Especialista en desarrollo frontend · Vue.js y Next.js</span>
               </motion.div>
 
               <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[1.05]">
@@ -268,7 +268,13 @@ export default function Portfolio() {
                     &quot;Mi compromiso es hacia el código limpio, las arquitecturas escalables y experiencias de usuario que realmente dejan una marca.&quot;
                   </p>
                 </div>
-                <ul className="space-y-3 mt-6">
+                <motion.ul 
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="space-y-4 mt-8"
+                >
                   {[
                     "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API.",
                     "Lógica de negocio sólida con JavaScript (ES6+) y TypeScript foundations.",
@@ -276,34 +282,56 @@ export default function Portfolio() {
                     "Enfoque centrado en conversión (UX) y diseños Mobile-First.",
                     "Graduada: Desarrollo Front-end Trainee · ISEG / SENCE 2026."
                   ].map((text, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <motion.li 
+                      key={i} 
+                      variants={fadeInUp}
+                      className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group/item"
+                    >
+                      <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-emerald-500/20 group-hover/item:scale-110 transition-all duration-300">
                          <ChevronRight className="w-4 h-4 text-emerald-400" />
                       </div>
-                      <span className="text-slate-300">{text}</span>
-                    </li>
+                      <span className="text-slate-300 group-hover/item:text-white transition-colors">{text}</span>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex flex-col gap-8">
-              {/* Profile Image card */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center gap-10">
+              {/* Profile image with circle style from image 1 */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 className="relative group"
               >
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                <div className="relative aspect-square sm:aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                  <Image 
-                    src="/mockups/foto de perfil.png" 
-                    alt="Valentina Paz" 
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto">
+                  <div className="absolute inset-0 bg-emerald-500 rounded-full blur-2xl opacity-20 animate-pulse group-hover:opacity-30 transition-opacity"></div>
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-emerald-500/30 p-1.5 bg-white/5 backdrop-blur-md shadow-[0_0_30px_rgba(16,185,129,0.2)] transition-all duration-500 group-hover:border-emerald-400 group-hover:shadow-[0_0_50px_rgba(16,185,129,0.3)]">
+                    <div className="w-full h-full rounded-full overflow-hidden relative">
+                      <Image 
+                        src="/mockups/foto de perfil.png" 
+                        alt="Valentina Paz" 
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </div>
+                  </div>
                 </div>
+                
+                {/* Specialist Badge from image 1 */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="mt-6 flex flex-col items-center"
+                >
+                  <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.1)] group-hover:border-emerald-500/40 group-hover:shadow-[0_0_25px_rgba(16,185,129,0.2)] transition-all duration-300">
+                    <Sparkles className="w-4 h-4" />
+                    <span>Especialista en desarrollo frontend · Vue.js y Next.js</span>
+                  </div>
+                </motion.div>
               </motion.div>
 
               <div className="relative group">
