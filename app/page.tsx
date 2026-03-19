@@ -249,16 +249,16 @@ export default function Portfolio() {
                   Hola, soy <strong className="text-white font-medium">Valentina Paz Llantèn Robles</strong> 👋. Junior Developer de Santiago, Chile. Transformo ideas complejas en experiencias digitales vibrantes y sólidas con un enfoque total en el usuario.
                 </p>
                 
-                <div className="pl-5 border-l-4 border-mint py-3 bg-cement/20 rounded-r-2xl shadow-sm">
-                  <p className="italic text-graphite/80 leading-relaxed font-medium">
+                <div className="pl-5 border-l-4 border-mint py-3 bg-white/5 rounded-r-2xl shadow-sm">
+                  <p className="italic text-foreground/80 leading-relaxed font-medium">
                     &quot;Mi compromiso es hacia el código limpio, las arquitecturas escalables y el aprendizaje continuo para construir soluciones integrales.&quot;
                   </p>
                 </div>
 
                 <div className="pt-4">
-                  <h4 className="text-graphite font-black text-xl mb-8 flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-lilac/30 flex items-center justify-center shadow-inner">
-                      <Sparkles className="w-6 h-6 text-graphite" />
+                  <h4 className="text-foreground font-black text-xl mb-8 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-lilac/30 flex items-center justify-center shadow-lg">
+                      <Sparkles className="w-6 h-6 text-foreground" />
                     </div>
                     Mi enfoque y capacidades:
                   </h4>
@@ -280,14 +280,14 @@ export default function Portfolio() {
                       <motion.li 
                         key={i} 
                         variants={fadeInUp}
-                        className="flex items-start gap-4 p-5 rounded-2xl bg-white/60 border border-graphite/5 hover:bg-white hover:shadow-xl hover:shadow-graphite/5 transition-all duration-500 group/item"
+                        className="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:shadow-xl transition-all duration-500 group/item"
                       >
-                        <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300 shadow-sm`}>
+                        <div className={`w-8 h-8 rounded-lg ${item.color} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-300 shadow-md`}>
                            <ChevronRight className="w-5 h-5 text-graphite" />
                         </div>
                         <div className="flex flex-col gap-1">
-                          <span className="text-graphite font-bold text-xs tracking-widest uppercase opacity-60">{item.title}</span>
-                          <span className="text-graphite/80 group-hover/item:text-graphite font-medium transition-colors">{item.text}</span>
+                          <span className="text-mint font-bold text-xs tracking-widest uppercase opacity-90">{item.title}</span>
+                          <span className="text-foreground/90 group-hover/item:text-foreground font-medium transition-colors">{item.text}</span>
                         </div>
                       </motion.li>
                     ))}
