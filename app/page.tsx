@@ -104,7 +104,7 @@ export default function Portfolio() {
         <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-emerald-900/10 blur-[150px]" />
         <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-teal-900/10 blur-[150px]" />
         <div className="absolute top-[40%] left-[50%] w-[40%] h-[40%] rounded-full bg-indigo-900/5 blur-[120px] translate-x-[-50%]" />
-        <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay" style={{ backgroundImage: "url('./noise.png')" }}></div>
+        <div className="absolute inset-0 noise-bg"></div>
       </div>
 
       {/* Navigation */}
@@ -190,16 +190,16 @@ export default function Portfolio() {
               {/* Removed profile image and badge here as it is now in Sobre mí */}
               <div className="pt-8"></div>
 
-              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[1.05]">
+              <motion.h1 variants={fadeInUp} className="text-5xl sm:text-7xl lg:text-8xl font-black text-white px-2 tracking-tighter leading-[1.05] filter drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">
                 Diseño que Conecta, <br />
-                <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent drop-shadow-sm">
+                <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-indigo-300 bg-clip-text text-transparent opacity-90">
                   Código que Escala
                 </span>
               </motion.h1>
 
               <motion.div variants={fadeInUp} className="max-w-2xl mx-auto">
-                <h2 className="text-xl sm:text-2xl text-slate-300 font-light leading-relaxed">
-                  Hola, soy <strong className="text-white font-semibold">Valentina Paz</strong> 👋. Junior Developer de Santiago, Chile. Transformo ideas complejas en experiencias digitales <span className="text-emerald-400 font-medium">vibrantes y sólidas</span> con un enfoque total en el usuario.
+                <h2 className="text-xl sm:text-2xl text-slate-400 font-light leading-relaxed">
+                  Transformando ideas complejas en experiencias digitales <span className="text-emerald-400 font-medium">vibrantes y sólidas</span> con un enfoque total en el usuario.
                 </h2>
               </motion.div>
 
@@ -244,41 +244,55 @@ export default function Portfolio() {
                 Diseño, construyo e <br className="hidden sm:block" />
                 <span className="text-emerald-400">implanto soluciones.</span>
               </h3>
-              <div className="space-y-5 text-slate-400 leading-relaxed text-lg">
+              <div className="space-y-6 text-slate-400 leading-relaxed text-lg">
                 <p>
-                  Soy una desarrolladora <strong className="text-white font-medium">Full Stack Junior</strong> con una gran pasión por el ecosistema Frontend moderno, en particular <span className="text-emerald-400">Vue.js</span>. Me encanta transformar ideas en experiencias digitales pulidas y de alto rendimiento.
+                  Hola, soy <strong className="text-white font-medium">Valentina Paz Llantèn Robles</strong> 👋. Junior Developer de Santiago, Chile. Transformo ideas complejas en experiencias digitales vibrantes y sólidas con un enfoque total en el usuario.
                 </p>
-                <div className="pl-4 border-l-2 border-emerald-500/30 py-2">
-                  <p className="italic text-slate-300">
-                    &quot;Mi compromiso es hacia el código limpio, las arquitecturas escalables y experiencias de usuario que realmente dejan una marca.&quot;
+                
+                <div className="pl-5 border-l-2 border-emerald-500/20 py-3 bg-white/2 rounded-r-xl">
+                  <p className="italic text-slate-300/90 leading-relaxed">
+                    &quot;Mi compromiso es hacia el código limpio, las arquitecturas escalables y el aprendizaje continuo para construir soluciones integrales.&quot;
                   </p>
                 </div>
-                <motion.ul 
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className="space-y-4 mt-8"
-                >
-                  {[
-                    "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API.",
-                    "Lógica de negocio sólida con JavaScript (ES6+) y TypeScript foundations.",
-                    "Integración eficiente de datos con Firebase Firestore y Realtime DB.",
-                    "Enfoque centrado en conversión (UX) y diseños Mobile-First.",
-                    "Graduada: Desarrollo Front-end Trainee · ISEG / SENCE 2026."
-                  ].map((text, i) => (
-                    <motion.li 
-                      key={i} 
-                      variants={fadeInUp}
-                      className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group/item"
-                    >
-                      <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-emerald-500/20 group-hover/item:scale-110 transition-all duration-300">
-                         <ChevronRight className="w-4 h-4 text-emerald-400" />
-                      </div>
-                      <span className="text-slate-300 group-hover/item:text-white transition-colors">{text}</span>
-                    </motion.li>
-                  ))}
-                </motion.ul>
+
+                <div className="pt-4">
+                  <h4 className="text-white font-bold text-xl mb-6 flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-indigo-400" />
+                    </div>
+                    Mi enfoque y capacidades:
+                  </h4>
+                  
+                  <motion.ul 
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="space-y-5"
+                  >
+                    {[
+                      { title: "Especialista en Front-end:", text: "Desarrollo de SPAs dinámicas optimizadas con Vue 3 y Composition API." },
+                      { title: "En formación Full Stack:", text: "Actualmente cursando especialización en Java, fortaleciendo la lógica de servidor y el manejo de bases de datos." },
+                      { title: "Lógica y Estructura:", text: "Sólida base en JavaScript (ES6+) y fundamentos de TypeScript." },
+                      { title: "Integración de Datos:", text: "Manejo de Firebase Firestore y Realtime DB para la persistencia de información." },
+                      { title: "Certificación:", text: "Graduada como Front-end Trainee (ISEG / SENCE, 2026)." }
+                    ].map((item, i) => (
+                      <motion.li 
+                        key={i} 
+                        variants={fadeInUp}
+                        className="flex items-start gap-4 p-4 rounded-xl bg-slate-900/40 border border-white/5 hover:border-emerald-500/20 transition-all duration-300 group/item"
+                      >
+                        <div className="w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-1 group-hover/item:bg-emerald-500/20 group-hover/item:scale-110 transition-all duration-300 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+                           <ChevronRight className="w-4 h-4 text-emerald-400" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <span className="text-emerald-300 font-bold text-sm tracking-wide uppercase">{item.title}</span>
+                          <span className="text-slate-300 group-hover/item:text-white transition-colors">{item.text}</span>
+                        </div>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </div>
               </div>
             </div>
 
@@ -320,30 +334,30 @@ export default function Portfolio() {
               </motion.div>
 
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                <div className="relative bg-[#0b1120] rounded-3xl p-8 border border-white/10 shadow-2xl">
+                <div className="absolute -inset-0.5 bg-gradient-to-br from-indigo-500/20 to-emerald-500/20 rounded-3xl blur-md opacity-50"></div>
+                <div className="relative bg-[#0b1120]/80 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
                   <div className="space-y-8">
                     <div>
-                      <h4 className="flex items-center gap-3 text-white font-semibold text-lg mb-4">
-                        <Terminal className="w-5 h-5 text-emerald-400" />
+                      <h4 className="flex items-center gap-3 text-white font-bold text-lg mb-4">
+                        <Terminal className="w-5 h-5 text-emerald-300" />
                         Stack Principal
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {tools.map(tech => (
-                          <span key={tech} className="px-3.5 py-1.5 bg-slate-800/50 text-slate-300 text-sm font-medium rounded-lg border border-slate-700/50 hover:border-emerald-500/50 hover:text-emerald-300 transition-colors cursor-default">
+                          <span key={tech} className="px-4 py-1.5 bg-slate-800/30 text-slate-300 text-sm font-semibold rounded-xl border border-white/5 hover:border-emerald-300/30 hover:text-emerald-200 transition-all duration-300 cursor-default">
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <div className="pt-8 border-t border-slate-800">
-                      <h4 className="flex items-center gap-3 text-white font-semibold text-lg mb-4">
-                        <Database className="w-5 h-5 text-indigo-400" />
+                    <div className="pt-8 border-t border-white/5">
+                      <h4 className="flex items-center gap-3 text-white font-bold text-lg mb-4">
+                        <Database className="w-5 h-5 text-indigo-300" />
                         Herramientas & Entorno
                       </h4>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2.5">
                         {["VS Code", "Vercel", "GitHub Actions", "Figma", "NPM / Yarn", "Java"].map(tech => (
-                          <span key={tech} className="px-3.5 py-1.5 bg-slate-800/50 text-slate-300 text-sm font-medium rounded-lg border border-slate-700/50 cursor-default hover:border-indigo-500/50 hover:text-indigo-300 transition-colors">
+                          <span key={tech} className="px-4 py-1.5 bg-slate-800/30 text-slate-300 text-sm font-semibold rounded-xl border border-white/5 cursor-default hover:border-indigo-300/30 hover:text-indigo-200 transition-all duration-300">
                             {tech}
                           </span>
                         ))}
