@@ -11,7 +11,7 @@
 <br />
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-View%20Live-000000?style=for-the-badge&logo=vercel)](https://portafolio-pro-virid.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/valentinapaz)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/valentina-llant%C3%A9n-robles-a2684a276/)
 [![Email](https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail)](mailto:valentinapazll.r@gmail.com)
 
 </div>
@@ -70,7 +70,7 @@ Desarrollo experiencias digitales **vibrantes, sólidas y orientadas a resultado
 ¡Estoy abierta a nuevas oportunidades y retos!
 - 📍 **Residencia:** Santiago, Chile (Disponible para Remoto)
 - 📧 **Correo:** [valentinapazll.r@gmail.com](mailto:valentinapazll.r@gmail.com)
-- 🤝 **LinkedIn:** [valentina-paz-ll](https://linkedin.com/in/valentinapaz)
+- 🤝 **LinkedIn:** [valentina-llantén-robles](https://www.linkedin.com/in/valentina-llant%C3%A9n-robles-a2684a276/)
 
 ---
 

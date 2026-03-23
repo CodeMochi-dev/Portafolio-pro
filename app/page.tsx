@@ -207,7 +207,7 @@ export default function Portfolio() {
                 <a href="#proyectos" className="inline-flex items-center gap-2 px-10 py-5 bg-emerald-500 text-slate-950 font-black rounded-2xl hover:bg-emerald-400 transition-all duration-300 transform hover:-translate-y-1 shadow-[0_10px_30px_rgba(16,185,129,0.3)]">
                   Ver Proyectos <ArrowRight className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com/in/valentinapaz" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white/5 text-white font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                <a href="https://www.linkedin.com/in/valentina-llant%C3%A9n-robles-a2684a276/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white/5 text-white font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
                   <Linkedin className="w-5 h-5 text-emerald-400" /> Mi Conexión
                 </a>
               </motion.div>
@@ -501,7 +501,7 @@ export default function Portfolio() {
               <a href="mailto:valentinapazll.r@gmail.com" className="flex items-center gap-3 px-8 py-4 bg-white text-slate-900 hover:bg-emerald-400 hover:text-white font-bold rounded-2xl transition-all duration-300 hover:shadow-[0_10px_20px_rgba(52,211,153,0.3)] group">
                 <Mail className="w-5 h-5 transition-transform group-hover:scale-110" /> Escríbeme
               </a>
-              <a href="https://linkedin.com/in/valentinapaz" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 bg-slate-800 text-white font-semibold rounded-2xl border border-slate-700 hover:bg-slate-700 hover:border-slate-500 transition-all duration-300">
+              <a href="https://www.linkedin.com/in/valentina-llant%C3%A9n-robles-a2684a276/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 bg-slate-800 text-white font-semibold rounded-2xl border border-slate-700 hover:bg-slate-700 hover:border-slate-500 transition-all duration-300">
                 <Linkedin className="w-5 h-5" /> LinkedIn
               </a>
             </div>
