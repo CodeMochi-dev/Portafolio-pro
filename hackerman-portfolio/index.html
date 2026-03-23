@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerman | Full Stack Developer</title>
+    <meta name="description" content="Portfolio de Hackerman - Desarrollo web de alto impacto">
+    
+    <!-- Google Fonts: Outfit (Industrial & Bold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Lucide Icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Custom Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav-capsule">
+            <div class="logo">
+                <span class="logo-dot"></span>
+                HACKERMAN<span class="text-mint">.</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i data-lucide="moon" class="theme-icon-dark"></i>
+                <i data-lucide="sun" class="theme-icon-light"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section hero">
+            <div class="container hero-content reveal">
+                <div class="badge-industrial">
+                    <span class="badge-dot"></span>
+                    DISPONIBLE PARA TRABAJAR
+                </div>
+                <h1 class="hero-title">
+                    Diseño que conecta, <br>
+                    <span class="gradient-text">Código que escala.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Full Stack Developer focused on clean code, intuitive interfaces and scalable backend architectures.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary magnetic">
+                        Ver Proyectos <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary magnetic">
+                        Hablemos <i data-lucide="coffee"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="mesh-gradient mesh-mint"></div>
+                <div class="mesh-gradient mesh-lilac"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Bento Grid) -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Proyectos <span class="text-lilac">Destacados</span></h2>
+                    <p class="section-desc">Selección de aplicaciones donde el diseño industrial se une a la robustez técnica.</p>
+                </div>
+                
+                <div class="bento-grid">
+                    <!-- Project 1 (Large) -->
+                    <div class="bento-item bento-large reveal">
+                        <div class="bento-inner">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder bg-mint-soft"></div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags">
+                                    <span class="tag tag-mint">Vue.js</span>
+                                    <span class="tag tag-lilac">Firebase</span>
+                                </div>
+                                <h3>EcoMarket CL</h3>
+                                <p>Plataforma de e-commerce optimizada con arquitectura SPA y diseño premium.</p>
+                                <div class="project-links">
+                                    <a href="#"><i data-lucide="github"></i></a>
+                                    <a href="#"><i data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Small) -->
+                    <div class="bento-item bento-small reveal">
+                        <div class="bento-inner">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder bg-lilac-soft"></div>
+                            </div>
+                            <div class="project-content">
+                                <h3>SmartBudget</h3>
+                                <p>Gestión financiera con dashboard dinámico.</p>
+                                <div class="project-links">
+                                    <a href="#"><i data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 (Small) -->
+                    <div class="bento-item bento-small reveal">
+                        <div class="bento-inner">
+                            <div class="project-img-wrapper">
+                                <div class="project-placeholder bg-pink-soft"></div>
+                            </div>
+                            <div class="project-content">
+                                <h3>LibroApp</h3>
+                                <p>Sistema de gestión bibliotecaria escalable.</p>
+                                <div class="project-links">
+                                    <a href="#"><i data-lucide="external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="section about">
+            <div class="container grid-2">
+                <div class="about-text reveal">
+                    <span class="section-sub">SOBRE MÍ</span>
+                    <h2 class="section-title">Hackerman</h2>
+                    <p>Soy un desarrollador apasionado por crear soluciones digitales que no solo funcionen a la perfección, sino que se sientan correctas al usarlas. Combino la rigidez del código industrial con la suavidad del diseño moderno.</p>
+                    
+                    <div class="skills-grid mt-10">
+                        <div class="skill-chip"><i data-lucide="code-2"></i> JavaScript</div>
+                        <div class="skill-chip"><i data-lucide="layout"></i> Frontend</div>
+                        <div class="skill-chip"><i data-lucide="database"></i> Backend</div>
+                        <div class="skill-chip"><i data-lucide="terminal"></i> Tools</div>
+                        <div class="skill-chip"><i data-lucide="git-branch"></i> Git</div>
+                        <div class="skill-chip"><i data-lucide="cpu"></i> Architecture</div>
+                    </div>
+                </div>
+                <div class="about-visual reveal">
+                    <div class="industrial-frame">
+                        <div class="profile-circle magnetic">
+                            <span class="profile-placeholder">H</span>
+                        </div>
+                        <div class="frame-decoration top-left"></div>
+                        <div class="frame-decoration bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="container reveal">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h2>¿Iniciamos un <span class="text-mint">Proyecto?</span></h2>
+                        <p>Completa el formulario o copia mi email.</p>
+                    </div>
+                    
+                    <form id="contact-form" class="mt-8">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Nombre</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" "></textarea>
+                            <label for="message">Mensaje</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full magnetic">
+                            Enviar Mensaje <i data-lucide="send"></i>
+                        </button>
+                    </form>
+
+                    <div class="email-copy-bar mt-8">
+                        <span id="email-text">hackerman@dev.com</span>
+                        <button id="copy-btn"><i data-lucide="copy"></i> Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2024 Hackerman. Built with Pastel Industrial Aesthetic.</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="github"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
