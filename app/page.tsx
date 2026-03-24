@@ -210,6 +210,8 @@ export default function Portfolio() {
                 <a href="https://www.linkedin.com/in/valentina-llant%C3%A9n-robles-a2684a276/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white/5 text-white font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
                   <Linkedin className="w-5 h-5 text-emerald-400" /> Mi Conexión
                 </a>
+                <a href="https://cv-valentina.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-10 py-5 bg-white/5 text-white font-bold rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+                  <Linkedin className="w-5 h-5 text-emerald-400" /> Mi CV
               </motion.div>
               <motion.div variants={staggerContainer} className="flex flex-wrap gap-4 justify-center mt-12">
                 {[
