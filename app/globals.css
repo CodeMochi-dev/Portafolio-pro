@@ -2,13 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --background: #F5F5F5; /* Blanco Hueso */
-  --foreground: #455A64; /* Grafito Suave */
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --mint: #B2EBF2;
   --lilac: #E1BEE7;
   --pink: #F8BBD0;
   --cement: #CFD8DC;
   --graphite: #455A64;
+  color-scheme: dark;
 }
 
 @theme inline {
