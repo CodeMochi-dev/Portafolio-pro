@@ -15,17 +15,19 @@ import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return savedTheme === 'dark' || (!savedTheme && prefersDark);
+    }
+    return false;
+  });
 
   useEffect(() => {
-    setMounted(true);
-    // Check for saved theme preference or default to light mode
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
     const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-    setDarkMode(shouldBeDark);
 
     if (shouldBeDark) {
       document.documentElement.classList.add('dark');
@@ -46,11 +48,6 @@ export default function App() {
       localStorage.setItem('theme', 'light');
     }
   };
-
-  // Prevent hydration mismatch
-  if (!mounted) {
-    return <div className="min-h-screen bg-white dark:bg-gray-900"></div>;
-  }
 
   return (
     <div className="min-h-screen">
