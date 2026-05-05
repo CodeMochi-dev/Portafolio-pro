@@ -1,23 +1,8 @@
-"use client";
+import App from './App';
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Code2,
-  Terminal,
-  Database,
-  Layout,
-  ChevronRight,
-  Globe,
-  Briefcase,
-  Sparkles,
-  ArrowRight
+export default function Home() {
+  return <App />;
+}
 } from "lucide-react";
 
 export default function Portfolio() {
