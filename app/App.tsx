@@ -49,7 +49,7 @@ export default function App() {
 
   // Prevent hydration mismatch
   if (!mounted) {
-    return null;
+    return <div className="min-h-screen bg-white dark:bg-gray-900"></div>;
   }
 
   return (

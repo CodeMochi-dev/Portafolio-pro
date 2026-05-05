@@ -3,11 +3,6 @@ import App from './App';
 export default function Home() {
   return <App />;
 }
-    },
-    {
-      title: "LibroApp",
-      description:
-        "Gestión de Catálogo Educativo. CRUD completo con integración de Firebase Firestore. Filtrado avanzado y experiencia de usuario fluida con arquitectura de datos escalable.",
       tags: ["Vue.js", "Firebase", "CRUD", "Firestore"],
       icon: <Database className="w-5 h-5 text-emerald-400 group-hover:text-teal-300 transition-colors" />,
       image: "/mockups/Libroapp.png",
