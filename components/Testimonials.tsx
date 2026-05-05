@@ -90,7 +90,7 @@ const Testimonials: React.FC = () => {
               </div>
 
               <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
 
               <div className="flex items-center">
