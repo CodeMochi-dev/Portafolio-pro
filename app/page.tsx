@@ -3,56 +3,6 @@ import App from './App';
 export default function Home() {
   return <App />;
 }
-} from "lucide-react";
-
-export default function Portfolio() {
-  const [mounted, setMounted] = useState(false);
-  const [activeSection, setActiveSection] = useState("inicio");
-
-  useEffect(() => {
-    // eslint-disable-next-line
-    setMounted(true);
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      let current = "inicio";
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        if (window.scrollY >= sectionTop - 200) {
-          current = section.getAttribute("id") || "inicio";
-        }
-      });
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
-
-  const tools = ["Vue.js", "JavaScript", "HTML5", "CSS3", "Firebase", "Git", "Tailwind CSS"];
-
-  const projects = [
-    {
-      title: "EcoMarket",
-      description:
-        "Showcase de Productos Digitales con Vue.js. Arquitectura SPA con componentes reutilizables, estados reactivos y localización completa para el mercado chileno (CLP/Español). Diseño premium con Glassmorphism.",
-      tags: ["Vue.js", "Composition API", "Scoped CSS", "Responsive Design"],
-      icon: <Globe className="w-5 h-5 text-emerald-400 group-hover:text-teal-300 transition-colors" />,
-      image: "/mockups/Ecomarket.png",
     },
     {
       title: "LibroApp",
